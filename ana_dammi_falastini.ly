@@ -16,11 +16,13 @@ keyTimeTempo = {
 	\tempo 4 = 200
 }
 %melodic components
-intro = {
+
+intro_walk_up = { r4 d8 d ef ef f f | g g a a bf bf c c }
+intro_melody = {
 	\repeat volta 4 {
 		\alternative {
 			{ r4 d16 ef d ef d4 d16 ef d ef | d4 r4 d16 ef d ef d4 }
-			{ r4 d,8 d ef ef f f | g g a a bf bf c c }
+			\relative d' \intro_walk_up
 		}
 	}
 }
@@ -44,7 +46,7 @@ melody = {
 
 	%intro
 	\break \section \mark \markup \box "Intro"
-	\relative c'' { \intro }
+	\relative c'' { \intro_melody }
 
 	\repeat segno 2 {
 		%theme
@@ -93,7 +95,7 @@ accompaniment = {
 	\repeat volta 4 {
 		\alternative{
 			{ | d1 ~ d1 | }
-			{ | r4 d8 d ef ef f f | g g a a bf bf c c |}
+			\relative d' \intro_walk_up
 		}
 	}
 
