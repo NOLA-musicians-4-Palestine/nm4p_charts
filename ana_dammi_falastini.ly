@@ -40,22 +40,23 @@ theme_background = {
 %parts
 melody = {
 	\keyTimeTempo
+	\set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 
 	%intro
-	\break \section \sectionLabel \markup \box "Intro"
+	\break \section \mark \markup \box "Intro"
 	\relative c'' { \intro }
 
 	\repeat segno 2 {
 		%theme
-		\break \section \sectionLabel \markup \box "A"
+		\break \section \mark \default
 		\relative  c' { \theme }
 
 		%theme background
-		\break \section \sectionLabel \markup \box "B"
+		\break \section \mark \default
 		\relative  c'' { \theme_background }
 
 		%pedal 1
-		\break \section \sectionLabel \markup \box "C"
+		\break \section \mark \default
 		\relative  c' {
 			\repeat volta 2 {
 				{ | d4^"All 1/4 notes in this section have a short trill" ef8 d d4 ef8 d | }
@@ -69,7 +70,7 @@ melody = {
 		}
 
 		%2nd pedal (on 3rd)
-		\break \section \sectionLabel \markup \box "D"
+		\break \section \mark \default
 		\relative  c' {
 			\repeat volta 3 {
 				| e8 f f f f4 a8 g |
@@ -87,7 +88,7 @@ accompaniment = {
 	\keyTimeTempo
 
 	%intro
-	\break \section \sectionLabel \markup \box "Intro"
+	\break \section \mark \markup \box "Intro"
 	\relative c'
 	\repeat volta 4 {
 		\alternative{
@@ -97,11 +98,11 @@ accompaniment = {
 	}
 
 	%theme background
-	\break \section \sectionLabel \markup \box "A"
+	\break \section \mark \default
 	\relative  c'' { \theme_background }
 
 	%theme
-	\break \section \sectionLabel \markup \box "B"
+	\break \section \mark \default
 	\relative  c' { \theme }
 
 }
