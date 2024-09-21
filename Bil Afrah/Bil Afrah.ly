@@ -222,7 +222,7 @@ Bil_Afrah-Melody =  \relative g' {
     g4 r4 r2 \bar "|."
     }
 
-Bil_Afrah-Accompaniment =  \relative bes {
+Bil_Afrah-Accompaniment =  \relative bes, {
     % \clef "treble_8" \time 3/4 \key bes \major 
     \repeat volta 2 {
         | % 1
