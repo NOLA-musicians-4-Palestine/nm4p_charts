@@ -29,7 +29,7 @@ intro_melody = {
 
 theme = {
 	| r4 d8 g f4 f8 ef | d4 ef f r
-	| r4 d8 g f4 f8 ef | d4 ef ef r
+	| r4 d8 g f4 f8 ef | d4 ef d r
 	| r4 d8 g f4 f8 ef | d4 ef f8 g16 a g4
 	| r4 a8 a a4 a8 g | f4 a  g r8 g | f4 a g r8 g | f4 a g f8 ef  | d4 f8 f f4 f8 f | f4 g f8 ef d c |
 }
@@ -50,36 +50,38 @@ melody = {
 
 	\repeat segno 2 {
 		%theme
-		\break \section \mark \default
+		\break \section \mark \default %A
 		\relative  c' { \theme }
 
 		%theme background
-		\break \section \mark \default
+		\break \section \mark \default %B
 		\relative  c'' { \theme_background }
 
-		%pedal 1
-		\break \section \mark \default
+		%1st pedal
+		\break \section \mark \default %C
 		\relative  c' {
 			\repeat volta 2 {
-				{ | d4^"All 1/4 notes in this section have a short trill" ef8 d d4 ef8 d | }
-				{ f4 ef8 d d4 ef8 d }
-				{ \repeat unfold 2 { d4 ef8 d } }
+				{ | d4\prall ef8 d d4\prall ef8 d | }
+				{ f4\prall ef8 d d4\prall ef8 d }
+				{ \repeat unfold 2 { d4\prall ef8 d } }
 				\alternative {
-					{ f8 g ef d d4 ef8 d }
+					{ f8 g ef d d4\prall ef8 d }
 					{ f8 g ef d d4 r }
 				}
 			}
 		}
 
 		%2nd pedal (on 3rd)
-		\break \section \mark \default
+		\break \section \mark \default %D
 		\relative  c' {
 			\repeat volta 3 {
 				| e8 f f f f4 a8 g |
 				\alternative {
 					{ | g4 e f8 f f4 |}
-					{ | g4 e f4 a8 g | \repeat unfold 2 {g4 a8 g } | g4 e f8 ef d c | }
-					\textEndMark "EITHER 1) back to A, 2) drum break for chants, or 3) to coda to end"
+					{
+						| g4 e f4 a8 g | g4 a8 g g4 a8 g | g4 e f8 ef d c |
+						\textEndMark "EITHER 1) back to A, 2) drum break for chants, or 3) to coda to end"
+					}
 				}
 			}
 		}
@@ -98,19 +100,48 @@ accompaniment = {
 			\relative d' \intro_walk_up
 		}
 	}
+	\repeat segno 2 {
 
-	%theme background
-	\break \section \mark \default
-	\relative  c'' { \theme_background }
+		%theme background
+		\break \section \mark \default %A
+		\relative  c'' { \theme_background }
 
-	%theme
-	\break \section \mark \default
-	\relative  c' { \theme }
+		%theme at B
+		\break \section \mark \default %B
+		\relative  c' { \theme }
 
+		%1st pedal
+		\break \section \mark \default %C
+		\relative c' {
+			\repeat volta 2{
+				d1 ~ | d2. c4 | d1 ~ |
+				\alternative {
+					{d2. r4 |}
+					{d2. r4 |}
+				}
+			}
+		}
+
+		%2nd pedal (on 3rd)
+		\break \section \mark \default %D
+		\relative  c' {
+			\repeat volta 3 {
+				{r4. f8-. r4 f8-. r8}
+				\alternative {
+					{r4. f8-. r4 f8-. r8}
+					{
+						r4. f8-. r4 f8-. r8 |
+						g4 r g r | g4 e f8 ef d c |
+						\textEndMark "EITHER 1) back to A, 2) drum break for chants, or 3) to coda to end"
+					}
+				}
+			}
+		}
+	}
 }
 
 \score {
-	\transpose d bf, {
+	\transpose d d {
 		<<
 			\new Staff \with { instrumentName = "Melody" shortInstrumentName = "mldy." } { \melody }
 			\new Staff \with { instrumentName = "Accompaniment" shortInstrumentName = "accomp." } { \accompaniment }
