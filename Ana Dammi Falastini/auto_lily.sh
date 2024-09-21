@@ -1,14 +1,15 @@
 #!/bin/bash
 
-folder_name="pdfs"
-if [ ! -d "$folder_name" ]; then
-	mkdir -p "$folder_name"
-fi
-
 inotifywait --include .*\.ly$ -m -e close_write "." | 
 while read -r directory events filename; do
+	folder="pdfs/$filename"
+
+	if [ ! -d "$folder" ]; then
+		mkdir -p "$folder"
+	fi
+
 	echo "==================================="
-	lilypond -o "pdfs" $filename
+	lilypond -o $folder $filename
 	echo "==================================="
 done
 
