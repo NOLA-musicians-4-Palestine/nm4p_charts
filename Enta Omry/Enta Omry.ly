@@ -547,7 +547,16 @@ Enta_Omry-Percussion =  \relative e' {
     r2 \bar "|."
     }
 
-
+Enta_Omry = 
+#(define-music-function
+    (part)
+    (string?)
+    (cond 
+        ((string=? part "Melody") Enta_Omry-Melody)
+        ((string=? part "Accompaniment") Enta_Omry-Melody)
+        ((string=? part "Bass") Enta_Omry-Melody)
+    )
+)
 % The score definition
 % \score {
 %     <<

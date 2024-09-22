@@ -459,6 +459,16 @@ Zeina-Percussion =  \relative e' {
     R1*2 \bar "|."
     }
 
+Zeina = 
+#(define-music-function
+    (part)
+    (string?)
+    (cond 
+        ((string=? part "Melody") Zeina-Melody)
+        ((string=? part "Accompaniment") Zeina-Melody)
+        ((string=? part "Bass") Zeina-Melody)
+    )
+)
 
 % % The score definition
 % \score {

@@ -221,7 +221,16 @@ Leve_Palestina-Percussion =  \relative e' {
     R1*4 \bar "|."
 }
 
-
+Leve_Palestina = 
+#(define-music-function
+    (part)
+    (string?)
+    (cond 
+        ((string=? part "Melody") Leve_Palestina-Melody)
+        ((string=? part "Accompaniment") Leve_Palestina-Melody)
+        ((string=? part "Bass") Leve_Palestina-Melody)
+    )
+)
 % The score definition
 % \score {
 %     <<

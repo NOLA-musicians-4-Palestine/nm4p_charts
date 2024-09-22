@@ -428,7 +428,16 @@ Bil_Afrah-Percussion =  \relative e' {
     R1*4 \bar "|."
     }
 
-
+Bil_Afrah = 
+#(define-music-function
+    (part)
+    (string?)
+    (cond 
+        ((string=? part "Melody") Bil_Afrah-Melody)
+        ((string=? part "Accompaniment") Bil_Afrah-Melody)
+        ((string=? part "Bass") Bil_Afrah-Melody)
+    )
+)
 % The score definition
 % \score {
 %     <<

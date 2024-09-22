@@ -1,6 +1,8 @@
 \version "2.24.1"
 % automatically converted by musicxml2ly from Ana Dammi Falastini.musicxml
 \include "arabic.ly"
+\include "../Style.ly"
+
 \language "nederlands"
 
 Ana_Dammi_Falastini-header = \header {
@@ -432,6 +434,16 @@ Ana_Dammi_Falastini-Percussion =  \relative e' {
     e4 e4 e4 r4 | % 40
 }
 
+Ana_Dammi_Falastini = 
+#(define-music-function
+    (part)
+    (string?)
+    (cond 
+        ((string=? part "Melody") Ana_Dammi_Falastini-Melody)
+        ((string=? part "Accompaniment") Ana_Dammi_Falastini-Melody)
+        ((string=? part "Bass") Ana_Dammi_Falastini-Melody)
+    )
+)
 
 % The score definition
 % \score {
