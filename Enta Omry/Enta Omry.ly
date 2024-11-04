@@ -264,7 +264,7 @@ Enta_Omry-Melody =  \relative f' {
     g8 [ as8 ] bes4 r2 \bar "|."
     }
 
-Enta_Omry-Accompaniment =  \relative f {
+Enta_Omry-Accompaniment =  \relative f' {
     % \clef "treble_8" \numericTimeSignature\time 4/4 \key es \major | % 1
     r4. f8 g2 | % 2
     r4. f8 g2 | % 3
@@ -553,8 +553,8 @@ Enta_Omry =
     (string?)
     (cond 
         ((string=? part "Melody") Enta_Omry-Melody)
-        ((string=? part "Accompaniment") Enta_Omry-Melody)
-        ((string=? part "Bass") Enta_Omry-Melody)
+        ((string=? part "Accompaniment") Enta_Omry-Accompaniment)
+        ((string=? part "Bass") Enta_Omry-Bass)
     )
 )
 % The score definition

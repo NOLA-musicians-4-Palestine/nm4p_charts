@@ -181,7 +181,7 @@ Ana_Dammi_Falastini-Melody =  \relative ces'' {
     bes4 as4 bes4 r4 | % 40
 }
 
-Ana_Dammi_Falastini-Accompaniment =  \relative bes, {
+Ana_Dammi_Falastini-Accompaniment =  \relative bes {
     \repeat volta 3 {
         | % 1
         bes1 ~ | % 2
@@ -440,8 +440,8 @@ Ana_Dammi_Falastini =
     (string?)
     (cond 
         ((string=? part "Melody") Ana_Dammi_Falastini-Melody)
-        ((string=? part "Accompaniment") Ana_Dammi_Falastini-Melody)
-        ((string=? part "Bass") Ana_Dammi_Falastini-Melody)
+        ((string=? part "Accompaniment") Ana_Dammi_Falastini-Accompaniment)
+        ((string=? part "Bass") Ana_Dammi_Falastini-Bass)
     )
 )
 

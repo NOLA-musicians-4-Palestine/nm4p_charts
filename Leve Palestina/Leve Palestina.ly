@@ -110,7 +110,7 @@ Leve_Palestina-Melody =  \relative f' {
         f8 [ es8 ] d4 \bar "|."
 }
 
-Leve_Palestina-Accompaniment =  \relative f {
+Leve_Palestina-Accompaniment =  \relative f' {
     % \clef "treble_8" 
     % \numericTimeSignature
     % \time 4/4 
@@ -227,8 +227,8 @@ Leve_Palestina =
     (string?)
     (cond 
         ((string=? part "Melody") Leve_Palestina-Melody)
-        ((string=? part "Accompaniment") Leve_Palestina-Melody)
-        ((string=? part "Bass") Leve_Palestina-Melody)
+        ((string=? part "Accompaniment") Leve_Palestina-Accompaniment)
+        ((string=? part "Bass") Leve_Palestina-Bass)
     )
 )
 % The score definition

@@ -13,7 +13,7 @@ part-name-key = "Accompaniment (treble)"
 \include "part-book.ily"
 
 part-name = "Accompaniment"
-part-clef = "bass"
+part-clef = "bass^8"
 part-key = c
 part-name-key = "Accompaniment (bass)"
 \include "part-book.ily"

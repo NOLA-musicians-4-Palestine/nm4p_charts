@@ -217,7 +217,7 @@ Zeina-Melody =  \relative bes' {
     } % ^ "D.S." \bar "|."
 }
 
-Zeina-Accompaniment =  \relative d {
+Zeina-Accompaniment =  \relative d' {
     % \clef "treble_8" 
     % \numericTimeSignature
     % \time 4/4 
@@ -465,8 +465,8 @@ Zeina =
     (string?)
     (cond 
         ((string=? part "Melody") Zeina-Melody)
-        ((string=? part "Accompaniment") Zeina-Melody)
-        ((string=? part "Bass") Zeina-Melody)
+        ((string=? part "Accompaniment") Zeina-Accompaniment)
+        ((string=? part "Bass") Zeina-Bass)
     )
 )
 

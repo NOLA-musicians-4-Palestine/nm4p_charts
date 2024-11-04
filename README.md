@@ -1,12 +1,24 @@
+#Notes from Nov. 4, '24
+Fixed the parts generator (Parts/Parts.ly and Parts/part-book.ily)
+* Generated parts content actually matches their titles
+* Added a line to set pdftitle in headers
+* Very minimal markup
+
+Todo:
+* Make decision about how transposing parts behave. (Should we transpose them to fit best onto the clef-staff, or should we transpose them so that all parts of the same music play the same pitch/octave?)
+* Add documentation
+* Generate parts in phone version
+* Generate svg output for web access
+
 #Notes from Sept. 22, '24
 Created Parts folder.
 * parts-book.ily is helper file which can take variables to generate different parts
 * Parts.ly contains specific values for different parts/transpositions/clefs
 
 ##Todo:
-Check generated parts for correctness
-* Fix several cases where transpositions too far off staff
-* Titles and other markup correct
+~~Check generated parts for correctness~~
+* ~~Fix several cases where transpositions too far off staff~~
+* ~~Titles and other markup correct~~
 
 Generate parts in phone version
 
