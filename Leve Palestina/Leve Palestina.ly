@@ -296,4 +296,3 @@ Leve_Palestina =
 
 %         >>
 %     }
-

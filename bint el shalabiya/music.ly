@@ -86,5 +86,3 @@ melodyB = \relative c' {
   f4. ef8 d4 c |
   d1 |
 }
-
-
