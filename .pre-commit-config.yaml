@@ -1,0 +1,9 @@
+repos:
+  - repo: local
+    hooks:
+      - id: ly-reformat
+        name: ly reformat
+        language: python
+        additional_dependencies: [python-ly]
+        entry: ly -i reformat
+        files: \.i?ly$
