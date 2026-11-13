@@ -1,3 +1,29 @@
+# Formatting
+
+`.ly` and `.ily` files are formatted with `ly reformat` from [python-ly](https://pypi.org/project/python-ly/). A [pre-commit](https://pre-commit.com) hook runs it on every commit. Enable it once per clone:
+
+```
+pre-commit install
+```
+
+pre-commit installs python-ly itself. If the hook reformats a file, the commit is aborted: `git add` the changes and commit again. To format everything by hand: `pre-commit run --all-files`.
+
+## Neovim
+
+Install `ly` on your `PATH` with `pip install --user python-ly`. With [formatter.nvim](https://github.com/mhartington/formatter.nvim), this entry makes `:Format` use it:
+
+```lua
+require("formatter").setup {
+  filetype = {
+    lilypond = {
+      function()
+        return { exe = "ly", args = { "reformat" }, stdin = true }
+      end
+    },
+  },
+}
+```
+
 #Notes from Nov. 4, '24
 Fixed the parts generator (Parts/Parts.ly and Parts/part-book.ily)
 * Generated parts content actually matches their titles
