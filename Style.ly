@@ -16,13 +16,13 @@
 %            mark)))) #} ))
 
 #(define-markup-command (padded-box layout props text) (markup?)
-  #:properties ((box-padding 0.5))
-  "Draw a padded box around text."
-  (interpret-markup layout props
-    #{\markup \override #`(box-padding . ,box-padding) \box
-               { \bold #text } #}))
+   #:properties ((box-padding 0.5))
+   "Draw a padded box around text."
+   (interpret-markup layout props
+                     #{\markup \override #`(box-padding . ,box-padding) \box
+                       { \bold #text } #}))
 
-% This MarkLine context is used to create a line at the top of the score 
+% This MarkLine context is used to create a line at the top of the score
 % containing instructions that should only be printed once. This workaround
 % is necessary mostly because \textMark events would otherwise be printed
 % on each staff

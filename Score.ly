@@ -170,151 +170,151 @@ target-key-text = "B-flat"
 % }
 
 \book {
-	\bookOutputName "Melody"
-	\header { instrument = \markup { "Melody" \target-key-text } } 
-	\bookpart {
-		\Ana_Dammi_Falastini-header
-		\score {
-			<<
-				\new MarkLine \Ana_Dammi_Falastini-Form
-				\transpose c \target-key
-				\new Staff <<
-					\clef "treble"
-					\Ana_Dammi_Falastini-Melody
-					\Ana_Dammi_Falastini-Form
-				>>
-			>>
-		}
-	}
-	\bookpart {
-		\Bil_Afrah-header
-		\score {
-			<<
-				\new MarkLine \Bil_Afrah-Form
-				\transpose c \target-key
-				\new Staff <<
-					\clef "treble"
-					\Bil_Afrah-Melody
-					\Bil_Afrah-Form
-				>>
-			>>
-		}
-	}
-	\bookpart {
-		\Enta_Omry-header
-		\score {
-			<<
-				\new MarkLine \Enta_Omry-Form
-				\transpose c \target-key
-				\new Staff <<
-					\clef "treble"
-					\Enta_Omry-Melody
-					\Enta_Omry-Form
-				>>
-			>>
-		}
-	}
-	\bookpart {
-		\Leve_Palestina-header
-		\score {
-			<<
-				\new MarkLine \Leve_Palestina-Form
-				\transpose c \target-key
-				\new Staff <<
-					\clef "treble"
-					\Leve_Palestina-Melody
-					\Leve_Palestina-Form
-				>>
-			>>
-		}
-	}
-	\bookpart {
-		\Zeina-header
-		\score {
-			<<
-				\new MarkLine \Zeina-Form
-				\transpose c \target-key
-				\new Staff <<
-					\clef "treble"
-					\Zeina-Melody
-					\Zeina-Form
-				>>
-			>>
-		}
-	}
+  \bookOutputName "Melody"
+  \header { instrument = \markup { "Melody" \target-key-text } }
+  \bookpart {
+    \Ana_Dammi_Falastini-header
+    \score {
+      <<
+        \new MarkLine \Ana_Dammi_Falastini-Form
+        \transpose c \target-key
+        \new Staff <<
+          \clef "treble"
+          \Ana_Dammi_Falastini-Melody
+          \Ana_Dammi_Falastini-Form
+        >>
+      >>
+    }
+  }
+  \bookpart {
+    \Bil_Afrah-header
+    \score {
+      <<
+        \new MarkLine \Bil_Afrah-Form
+        \transpose c \target-key
+        \new Staff <<
+          \clef "treble"
+          \Bil_Afrah-Melody
+          \Bil_Afrah-Form
+        >>
+      >>
+    }
+  }
+  \bookpart {
+    \Enta_Omry-header
+    \score {
+      <<
+        \new MarkLine \Enta_Omry-Form
+        \transpose c \target-key
+        \new Staff <<
+          \clef "treble"
+          \Enta_Omry-Melody
+          \Enta_Omry-Form
+        >>
+      >>
+    }
+  }
+  \bookpart {
+    \Leve_Palestina-header
+    \score {
+      <<
+        \new MarkLine \Leve_Palestina-Form
+        \transpose c \target-key
+        \new Staff <<
+          \clef "treble"
+          \Leve_Palestina-Melody
+          \Leve_Palestina-Form
+        >>
+      >>
+    }
+  }
+  \bookpart {
+    \Zeina-header
+    \score {
+      <<
+        \new MarkLine \Zeina-Form
+        \transpose c \target-key
+        \new Staff <<
+          \clef "treble"
+          \Zeina-Melody
+          \Zeina-Form
+        >>
+      >>
+    }
+  }
 }
 
 \book {
-	\bookOutputName "Accompaniment"
-	\header { instrument = \markup { "Accompaniment" \target-key-text } }
-	\bookpart {
-		\Ana_Dammi_Falastini-header
-		\score {
-			<<
-				\new MarkLine \Ana_Dammi_Falastini-Form
-				\transpose c \target-key
-				\new Staff <<
-					\clef "bass"
-					\Ana_Dammi_Falastini-Accompaniment
-					\Ana_Dammi_Falastini-Form
-				>>
-			>>
-		}
-	}
-	\bookpart {
-		\Bil_Afrah-header
-		\score {
-			<<
-				\new MarkLine \Bil_Afrah-Form
-				\transpose c \target-key
-				\new Staff <<
-					\clef "bass"
-					\Bil_Afrah-Accompaniment
-					\Bil_Afrah-Form
-				>>
-			>>
-		}
-	}
-	\bookpart {
-		\Enta_Omry-header
-		\score {
-			<<
-				\new MarkLine \Enta_Omry-Form
-				\transpose c \target-key
-				\new Staff <<
-					\clef "bass"
-					\Enta_Omry-Accompaniment
-					\Enta_Omry-Form
-				>>
-			>>
-		}
-	}
-	\bookpart {
-		\Leve_Palestina-header
-		\score {
-			<<
-				\new MarkLine \Leve_Palestina-Form
-				\transpose c \target-key
-				\new Staff <<
-					\clef "bass"
-					\Leve_Palestina-Accompaniment
-					\Leve_Palestina-Form
-				>>
-			>>
-		}
-	}
-	\bookpart {
-		\Zeina-header
-		\score {
-			<<
-				\new MarkLine \Zeina-Form
-				\transpose c \target-key
-				\new Staff <<
-					\clef "bass"
-					\Zeina-Accompaniment
-					\Zeina-Form
-				>>
-			>>
-		}
-	}
+  \bookOutputName "Accompaniment"
+  \header { instrument = \markup { "Accompaniment" \target-key-text } }
+  \bookpart {
+    \Ana_Dammi_Falastini-header
+    \score {
+      <<
+        \new MarkLine \Ana_Dammi_Falastini-Form
+        \transpose c \target-key
+        \new Staff <<
+          \clef "bass"
+          \Ana_Dammi_Falastini-Accompaniment
+          \Ana_Dammi_Falastini-Form
+        >>
+      >>
+    }
+  }
+  \bookpart {
+    \Bil_Afrah-header
+    \score {
+      <<
+        \new MarkLine \Bil_Afrah-Form
+        \transpose c \target-key
+        \new Staff <<
+          \clef "bass"
+          \Bil_Afrah-Accompaniment
+          \Bil_Afrah-Form
+        >>
+      >>
+    }
+  }
+  \bookpart {
+    \Enta_Omry-header
+    \score {
+      <<
+        \new MarkLine \Enta_Omry-Form
+        \transpose c \target-key
+        \new Staff <<
+          \clef "bass"
+          \Enta_Omry-Accompaniment
+          \Enta_Omry-Form
+        >>
+      >>
+    }
+  }
+  \bookpart {
+    \Leve_Palestina-header
+    \score {
+      <<
+        \new MarkLine \Leve_Palestina-Form
+        \transpose c \target-key
+        \new Staff <<
+          \clef "bass"
+          \Leve_Palestina-Accompaniment
+          \Leve_Palestina-Form
+        >>
+      >>
+    }
+  }
+  \bookpart {
+    \Zeina-header
+    \score {
+      <<
+        \new MarkLine \Zeina-Form
+        \transpose c \target-key
+        \new Staff <<
+          \clef "bass"
+          \Zeina-Accompaniment
+          \Zeina-Form
+        >>
+      >>
+    }
+  }
 }

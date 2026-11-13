@@ -2,53 +2,53 @@
 \include "music.ly"
 
 \header {
-	instrument = "Trumpet - Combined - Bb"
+  instrument = "Trumpet - Combined - Bb"
 }
 \book{
   \bookOutputSuffix "trumpet-combined-Bb"
   \score {
-	\new Staff \with { instrumentName = "Trumpet" } {
-	  \clef "treble"
-	  \transpose bf, c {
-	  	\global \new Voice {
-			<<
-				\TrumpetMelody
-				\TrumpetHarmony
-			>>
-		}
-	  }
-	}
-	\layout { }
+    \new Staff \with { instrumentName = "Trumpet" } {
+      \clef "treble"
+      \transpose bf, c {
+        \global \new Voice {
+          <<
+            \TrumpetMelody
+            \TrumpetHarmony
+          >>
+        }
+      }
+    }
+    \layout { }
   }
   \form
 }
 
 \header {
-	instrument = "Trumpet - Melody - Bb"
+  instrument = "Trumpet - Melody - Bb"
 }
 \book{
   \bookOutputSuffix "trumpet-melody--Bb"
   \score {
-	\new Staff \with { instrumentName = "Trumpet" } {
-	  \clef "treble"
-	  \transpose bf, c { \global \new Voice \TrumpetMelody }
-	}
-	\layout { }
+    \new Staff \with { instrumentName = "Trumpet" } {
+      \clef "treble"
+      \transpose bf, c { \global \new Voice \TrumpetMelody }
+    }
+    \layout { }
   }
   \form
 }
 
 \header {
-	instrument = "Trumpet - Harmony - Bb"
+  instrument = "Trumpet - Harmony - Bb"
 }
 \book{
   \bookOutputSuffix "trumpet-harmony--Bb"
   \score {
-	\new Staff \with { instrumentName = "Trumpet" } {
-	  \clef "treble"
-	  \transpose bf, c { \global \new Voice \TrumpetHarmony }
-	}
-	\layout { }
+    \new Staff \with { instrumentName = "Trumpet" } {
+      \clef "treble"
+      \transpose bf, c { \global \new Voice \TrumpetHarmony }
+    }
+    \layout { }
   }
   \form
 }
