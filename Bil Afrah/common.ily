@@ -74,6 +74,9 @@ lines =
 % whole octaves so its range sits around the middle line of the staff.
 fit = #(define-music-function (music) (ly:music?) #{ \tag #'fit #music #})
 
+% Like \fit, but puts the first note of the section nearest the bottom line.
+fitLow = #(define-music-function (music) (ly:music?) #{ \tag #'fit-low #music #})
+
 % Diatonic step of each clef's middle line, counted from middle C.
 #(define staff-middle-step '(("treble" . 6) ("bass" . -6)))
 
@@ -82,8 +85,9 @@ fit = #(define-music-function (music) (ly:music?) #{ \tag #'fit #music #})
    (+ (* 7 (ly:pitch-octave pitch)) (ly:pitch-notename pitch)))
 
 % Transposes music by the whole octaves that bring the centre of its range
-% closest to middle-step, mutating music in place.
-#(define (center-on-staff middle-step music)
+% closest to middle-step, or with low its first note closest to the bottom
+% line, mutating music in place.
+#(define (center-on-staff middle-step low music)
    (let ((steps '()))
      (music-map
       (lambda (m)
@@ -94,17 +98,22 @@ fit = #(define-music-function (music) (ly:music?) #{ \tag #'fit #music #})
       music)
      (if (null? steps)
          music
-         (let* ((center (/ (+ (apply min steps) (apply max steps)) 2))
-                (octaves (round (/ (- middle-step center) 7))))
+         (let* ((current (if low
+                             (last steps)
+                             (/ (+ (apply min steps) (apply max steps)) 2)))
+                (target (if low (- middle-step 4) middle-step))
+                (octaves (round (/ (- target current) 7))))
            (ly:music-transpose music (ly:make-pitch octaves 0 0))))))
 
-% Applies center-on-staff to every section tagged by \fit, independently.
+% Applies center-on-staff to every section tagged by \fit or \fitLow,
+% independently.
 #(define (center-fit-sections middle-step music)
    (music-map
     (lambda (m)
-      (if (memq 'fit (ly:music-property m 'tags))
-          (center-on-staff middle-step m)
-          m))
+      (let ((tags (ly:music-property m 'tags)))
+        (cond ((memq 'fit tags) (center-on-staff middle-step #f m))
+              ((memq 'fit-low tags) (center-on-staff middle-step #t m))
+              (else m))))
     music))
 
 % A flat sized for running text: the text font has no ♭ glyph, so the music

@@ -7,7 +7,7 @@
 mid = {
   \yaHabibiStart
   \rehearsal "A Accompaniment" "1st time or when someone else is featured"
-  \lines 2 \fit \yaHabibiAccompanimentA
+  \lines 2 \fitLow \yaHabibiAccompanimentA
   \break
   \rehearsal "A Melody" "2nd time"
   \lines 2 \fit \yaHabibiMelodyA
@@ -15,7 +15,7 @@ mid = {
   \rehearsal "B" ""
   \fit \yaHabibiMelodyBOne
   \break
-  \fit \yaHabibiMelodyBTwo
+  \fitLow \yaHabibiMelodyBTwo
   \textEndMark \markup \italic "optional: taksim with drone"
   \break
   \chirakStart

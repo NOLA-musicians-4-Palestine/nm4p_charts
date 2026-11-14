@@ -10,12 +10,12 @@ high = {
   \lines 2 \fit \yaHabibiMelodyA
   \break
   \rehearsal "A Accompaniment" "2nd time or when someone else is featured"
-  \lines 2 \fit \yaHabibiAccompanimentA
+  \lines 2 \fitLow \yaHabibiAccompanimentA
   \break
   \rehearsal "B" ""
   \fit \yaHabibiMelodyBOne
   \break
-  \fit \yaHabibiMelodyBTwo
+  \fitLow \yaHabibiMelodyBTwo
   \textEndMark \markup \italic "optional: taksim with drone"
   \break
   \chirakStart

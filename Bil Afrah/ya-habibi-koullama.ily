@@ -9,7 +9,7 @@ yaHabibiStart = {
   \tempo \markup { \bold "Ya Habibi Koullama" "– drums start: Darij |DTTDT-|, loop AB" }
 }
 
-% The response fills of bars 3, 6 and 12 belong to the accompaniment.
+% The response fills of bars 3 and 6 belong to the accompaniment.
 yaHabibiMelodyA = \relative g' {
   g8 d' d4 d |
   c8 d c4 bes |
@@ -22,16 +22,16 @@ yaHabibiMelodyA = \relative g' {
   c8 bes c bes d c |
   bes8 a bes a c bes |
   d8 c bes a g4 |
-  a16 c bes a g4 r |
+  a16 c bes a g4 es16 d fis es |
 }
 
-yaHabibiAccompanimentA = \relative bes {
-  \repeat unfold 2 { r4 <bes d g> r | }
-  r4 <bes d g>8 bes16 a g4 |
-  \repeat unfold 2 { r4 <bes d g> r | }
-  r4 <bes d g>8 bes16 c d4 |
-  \repeat unfold 5 { r4 <bes d g> r | }
-  r4 <bes d g> es16 d fis es |
+yaHabibiAccompanimentA = \relative g {
+  \repeat unfold 2 { r4 <g bes d> r | }
+  r4 <g bes d>8 bes16 a g4 |
+  \repeat unfold 2 { r4 <g bes d> r | }
+  r4 <g bes d>8 bes16 c d4 |
+  \repeat unfold 5 { r4 <g, bes d> r | }
+  r4 <g bes d> es16 d fis es |
 }
 
 yaHabibiMelodyBOne = \relative g' {

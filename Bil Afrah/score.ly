@@ -15,7 +15,7 @@ scoreHigh = {
   \rehearsal "B" ""
   \fit \yaHabibiMelodyBOne
   \break
-  \fit \yaHabibiMelodyBTwo
+  \fitLow \yaHabibiMelodyBTwo
   \textEndMark \markup \italic "optional: taksim with drone"
   \break
   \chirakStart
@@ -28,9 +28,9 @@ scoreHigh = {
 }
 
 scoreMid = {
-  \fit \yaHabibiAccompanimentA
+  \fitLow \yaHabibiAccompanimentA
   \fit \yaHabibiMelodyBOne
-  \fit \yaHabibiMelodyBTwo
+  \fitLow \yaHabibiMelodyBTwo
   \fit \chirakAccompanimentLow
   \fit \chirakEnding
 }
