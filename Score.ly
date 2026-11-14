@@ -3,7 +3,6 @@
 \include "Style.ly"
 
 \include "Ana Dammi Falastini/Ana Dammi Falastini.ly"
-\include "Bil Afrah/Bil Afrah.ly"
 \include "Enta Omry/Enta Omry.ly"
 \include "Leve Palestina/Leve Palestina.ly"
 \include "Zeina/Zeina.ly"
@@ -39,37 +38,6 @@ target-key-text = "B-flat"
 % 					\clef "percussion"
 % 					\Ana_Dammi_Falastini-Percussion
 % 					\Ana_Dammi_Falastini-Form
-% 				>>
-% 			>>
-% 		}
-% 	}
-% 	\bookpart {
-% 		\Bil_Afrah-header
-% 		\score {
-% 			<<
-% 				\new MarkLine \Bil_Afrah-Form
-% 				\transpose c \target-key
-% 				\new Staff <<
-% 					\clef "treble"
-% 					\Bil_Afrah-Melody
-% 					\Bil_Afrah-Form
-% 				>>
-% 				\transpose c \target-key
-% 				\new Staff <<
-% 					\clef "bass^8"
-% 					\Bil_Afrah-Accompaniment
-% 					\Bil_Afrah-Form
-% 				>>
-% 				\transpose c \target-key
-% 				\new Staff <<
-% 					\clef "bass"
-% 					\Bil_Afrah-Bass
-% 					\Bil_Afrah-Form
-% 				>>
-% 				\new DrumStaff <<
-% 					\clef "percussion"
-% 					\Bil_Afrah-Percussion
-% 					\Bil_Afrah-Form
 % 				>>
 % 			>>
 % 		}
@@ -187,20 +155,6 @@ target-key-text = "B-flat"
     }
   }
   \bookpart {
-    \Bil_Afrah-header
-    \score {
-      <<
-        \new MarkLine \Bil_Afrah-Form
-        \transpose c \target-key
-        \new Staff <<
-          \clef "treble"
-          \Bil_Afrah-Melody
-          \Bil_Afrah-Form
-        >>
-      >>
-    }
-  }
-  \bookpart {
     \Enta_Omry-header
     \score {
       <<
@@ -257,20 +211,6 @@ target-key-text = "B-flat"
           \clef "bass"
           \Ana_Dammi_Falastini-Accompaniment
           \Ana_Dammi_Falastini-Form
-        >>
-      >>
-    }
-  }
-  \bookpart {
-    \Bil_Afrah-header
-    \score {
-      <<
-        \new MarkLine \Bil_Afrah-Form
-        \transpose c \target-key
-        \new Staff <<
-          \clef "bass"
-          \Bil_Afrah-Accompaniment
-          \Bil_Afrah-Form
         >>
       >>
     }
