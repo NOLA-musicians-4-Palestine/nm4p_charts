@@ -7,7 +7,10 @@
 mid = {
   \yaHabibiStart
   \rehearsal "A Accompaniment" "1st time or when someone else is featured"
-  \lines 2 \fitLow \yaHabibiAccompanimentA
+  <<
+    \lines 2 \fitLow \yaHabibiAccompanimentA
+    \chordsAbove "part" \yaHabibiChordsA
+  >>
   \break
   \rehearsal "A Melody" "2nd time"
   \lines 2 \fit \yaHabibiMelodyA

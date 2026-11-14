@@ -28,7 +28,10 @@ scoreHigh = {
 }
 
 scoreMid = {
-  \fitLow \yaHabibiAccompanimentA
+  <<
+    \fitLow \yaHabibiAccompanimentA
+    \chordsAbove "mid" \yaHabibiChordsA
+  >>
   \fit \yaHabibiMelodyBOne
   \fit \yaHabibiMelodyBTwo
   \fit \chirakAccompanimentLow
@@ -36,10 +39,9 @@ scoreMid = {
 }
 
 scoreBass = {
-  \repeat percent 12 \yaHabibiBass
-  \repeat percent 11 \yaHabibiBass
-  \yaHabibiBassLast
-  \repeat percent 16 \chirakBass
+  \yaHabibiBassA
+  \yaHabibiBassB
+  \chirakBassLoop
   \chirakBassEnding
 }
 
@@ -48,7 +50,7 @@ scoreBass = {
   \bookOutputName "Bil Afrah - Score"
   \header {
     instrument = "Score"
-    meter = \markup { "Maqam" #maqam "on G" }
+    meter = \markup { #maqam "G" }
   }
   \score {
     <<
@@ -57,13 +59,13 @@ scoreBass = {
         \autoLineBreaksOff
         \centered "treble" \scoreHigh
       }
-      \new Staff \with { instrumentName = "Mid" } {
+      \new Staff = "mid" \with { instrumentName = "Mid" } {
         \clef "bass"
         \centered "bass" \scoreMid
       }
       \new Staff \with { instrumentName = "Bass" } {
         \clef "bass"
-        \centered "bass" \fit \scoreBass
+        \centered "bass" \fitLow \scoreBass
       }
     >>
     \layout { indent = 12 }

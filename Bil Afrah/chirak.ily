@@ -52,7 +52,14 @@ chirakEnding = \relative g'' {
   g4 r r2 |
 }
 
-chirakBass = \relative g, { g2. d4 | }
+% The walk-down in bars 15 and 16 leads into the End, on the last pass only.
+chirakBassLoop = \relative g, {
+  \repeat percent 14 { g2. d4 | }
+  \dashedBracket "ending only" {
+    g4 f es d |
+    g8 g f f es es d d |
+  }
+}
 
 chirakBassEnding = \relative g, {
   \repeat percent 3 { g2. d4 | }

@@ -25,6 +25,22 @@ yaHabibiMelodyA = \relative g' {
   a16 c bes a g4 es16 d fis es |
 }
 
+% Optional C minor in bars 7 and 8 of A, called by the band leader.
+yaHabibiOptionalChordA = \chordmode { \optionalChord c2.*2:m }
+
+yaHabibiChordsA = \chordmode {
+  s2.*6
+  \yaHabibiOptionalChordA
+  s2.*4
+}
+
+% The bass improvises on the chord tones, so it also sees the G minor.
+yaHabibiBassChordsA = \chordmode {
+  g2.*6:m
+  \yaHabibiOptionalChordA
+  s2.*4
+}
+
 yaHabibiAccompanimentA = \relative g {
   \repeat unfold 2 { r4 <g bes d> r | }
   r4 <g bes d>8 bes16 a g4 |
@@ -52,6 +68,13 @@ yaHabibiMelodyBTwo = \relative bes' {
   a16 c bes a g2 |
 }
 
-yaHabibiBass = \relative g, { g2 d4 | }
+yaHabibiBassA = \relative g, {
+  \repeat percent 10 { g2 d4 | }
+  d f g |
+  g,2. |
+}
 
-yaHabibiBassLast = \relative g, { g2. | }
+yaHabibiBassB = \relative g, {
+  \repeat percent 11 { g2 d4 | }
+  g2. |
+}

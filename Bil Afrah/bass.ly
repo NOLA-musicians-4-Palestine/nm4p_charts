@@ -6,26 +6,25 @@
 
 bass = {
   \yaHabibiStart
-  \rehearsal "A" ""
-  \lines 2 \repeat percent 12 \yaHabibiBass
+  \rehearsal "A" "vary chord tones as felt"
+  <<
+    \lines 2 \yaHabibiBassA
+    \chordsAbove "part" \yaHabibiBassChordsA
+  >>
   \break
   \rehearsal "B" ""
-  <<
-    { \repeat percent 11 \yaHabibiBass }
-    { s2.*6 \break }
-  >>
-  \yaHabibiBassLast
+  \lines 2 \yaHabibiBassB
   \textEndMark \markup \italic "optional: taksim with drone"
   \break
   \chirakStart
   \rehearsal "" ""
-  \lines 4 \repeat percent 16 \chirakBass
+  \lines 4 \chirakBassLoop
   \break
   \rehearsal "End" "on cue"
   \chirakBassEnding
   \bar "|."
 }
 
-\part "Bass C" "bass" c \fit \bass
-\part "Bass E♭" "treble" es \fit \bass
-\part "Bass B♭" "treble" bes \fit \bass
+\part "Bass C" "bass" c \fitLow \bass
+\part "Bass E♭" "treble" es \fitLow \bass
+\part "Bass B♭" "treble" bes \fitLow \bass

@@ -10,7 +10,10 @@ high = {
   \lines 2 \fit \yaHabibiMelodyA
   \break
   \rehearsal "A Accompaniment" "2nd time or when someone else is featured"
-  \lines 2 \fitLow \yaHabibiAccompanimentA
+  <<
+    \lines 2 \fitLow \yaHabibiAccompanimentA
+    \chordsAbove "part" \yaHabibiChordsA
+  >>
   \break
   \rehearsal "B" ""
   \fit \yaHabibiMelodyBOne
@@ -26,7 +29,7 @@ high = {
   \lines 4 \fit \chirakAccompanimentHigh
   \break
   \rehearsal "End" "on cue"
-  \fit \chirakEnding
+  \fitHigh \chirakEnding
   \bar "|."
 }
 
