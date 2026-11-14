@@ -15,7 +15,7 @@ high = {
   \rehearsal "B" ""
   \fit \yaHabibiMelodyBOne
   \break
-  \fitLow \yaHabibiMelodyBTwo
+  \fit \yaHabibiMelodyBTwo
   \textEndMark \markup \italic "optional: taksim with drone"
   \break
   \chirakStart
