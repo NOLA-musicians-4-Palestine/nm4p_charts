@@ -3,7 +3,6 @@
 \include "../Style.ly"
 
 \include "../Ana Dammi Falastini/Ana Dammi Falastini.ly"
-\include "../Bil Afrah/Bil Afrah.ly"
 \include "../Enta Omry/Enta Omry.ly"
 \include "../Leve Palestina/Leve Palestina.ly"
 \include "../Zeina/Zeina.ly"
@@ -33,20 +32,6 @@
           \clef \part-clef
           #(Ana_Dammi_Falastini part-name)
           \Ana_Dammi_Falastini-Form
-        >>
-      >>
-    }
-  }
-  \bookpart {
-    \Bil_Afrah-header
-    \score {
-      <<
-        \new MarkLine \Bil_Afrah-Form
-        \transpose c \part-key
-        \new Staff <<
-          \clef \part-clef
-          #(Bil_Afrah part-name)
-          \Bil_Afrah-Form
         >>
       >>
     }
