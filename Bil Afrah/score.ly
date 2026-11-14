@@ -12,7 +12,7 @@ scoreHigh = {
   \rehearsal "A" "High on melody, mid on accompaniment; swap 2nd time"
   \lines 2 \fit \yaHabibiMelodyA
   \break
-  \rehearsal "B" "All on melody"
+  \rehearsal "B" ""
   \fit \yaHabibiMelodyBOne
   \break
   \fit \yaHabibiMelodyBTwo

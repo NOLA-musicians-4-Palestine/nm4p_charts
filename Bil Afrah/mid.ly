@@ -12,7 +12,7 @@ mid = {
   \rehearsal "A Melody" "2nd time"
   \lines 2 \fit \yaHabibiMelodyA
   \break
-  \rehearsal "B Melody" "all"
+  \rehearsal "B" ""
   \fit \yaHabibiMelodyBOne
   \break
   \fit \yaHabibiMelodyBTwo

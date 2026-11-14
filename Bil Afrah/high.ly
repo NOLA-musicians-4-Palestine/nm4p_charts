@@ -12,7 +12,7 @@ high = {
   \rehearsal "A Accompaniment" "2nd time or when someone else is featured"
   \lines 2 \fit \yaHabibiAccompanimentA
   \break
-  \rehearsal "B Melody" "all"
+  \rehearsal "B" ""
   \fit \yaHabibiMelodyBOne
   \break
   \fit \yaHabibiMelodyBTwo
