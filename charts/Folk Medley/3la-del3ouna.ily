@@ -39,8 +39,7 @@ delounaChorusAccompaniment = \relative d {
 
 delounaBassIntro = \relative d, {
   \repeat volta 2 {
-    d2~ d4. c'8 d4 d |
-    d,2~ d4. c'8 d4 d |
+    \repeat percent 2 { d2~ d4. c'8 d4 d | }
   }
 }
 

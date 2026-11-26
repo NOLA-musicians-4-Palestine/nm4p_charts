@@ -68,10 +68,7 @@ weinAccompanimentB = \relative g {
 
 weinBassA = \relative d, {
   \repeat volta 2 {
-    d8. d'8 r16 d8 |
-    d,8. d'8 r16 d8 |
-    d,8. d'8 r16 d8 |
-    d,8. d'8 r16 d8 |
+    \repeat percent 4 { d8. d'8 r16 d8 | }
     g,8. g'8 r16 g8 |
     f,4 es |
   }
@@ -83,11 +80,7 @@ weinBassA = \relative d, {
 
 weinBassB = \relative g, {
   \repeat volta 2 {
-    g8. g'8 r16 g8 |
-    g,8. g'8 r16 g8 |
-    g,8. g'8 r16 g8 |
-    g,8. g'8 r16 g8 |
-    g,8. g'8 r16 g8 |
+    \repeat percent 5 { g8. g'8 r16 g8 | }
     f,4 es |
     d8. d'8 r16 d8 |
   }

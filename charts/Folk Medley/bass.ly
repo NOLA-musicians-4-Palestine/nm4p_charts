@@ -8,33 +8,35 @@
 bass = {
   \yaZarifStart
   \rehearsal "A" "octave as appropriate"
-  \noteNamesAbove "part" \fit \yaZarifBass
+  \noteNamesAbove "part" \yaZarifBass
   \break
   \interludeStart
-  \noteNamesAbove "part" \lines 2 \fit \interludeBass
+  \noteNamesAbove "part" \lines 2 \interludeBass
   \textEndMark \markup \italic "then chants / drum break"
   \break
   \delounaStart
   \rehearsal "Intro" ""
-  \noteNamesAbove "part" \fit \delounaBassIntro
+  \noteNamesAbove "part" \delounaBassIntro
   \break
   \rehearsal "Chorus" ""
-  \noteNamesAbove "part" \fit \delounaBassChorus
+  \noteNamesAbove "part" \delounaBassChorus
   \break
   \rehearsal "Verse" ""
-  \noteNamesAbove "part" \fit \delounaBassVerse
+  \noteNamesAbove "part" \delounaBassVerse
   \textEndMark \markup \italic "then chants, or straight on"
   \break
   \weinStart
   \rehearsal "A" ""
-  \noteNamesAbove "part" \fit \weinBassA
+  \noteNamesAbove "part" \weinBassA
   \break
   \rehearsal "B" ""
-  \noteNamesAbove "part" \fit \weinBassB
+  \noteNamesAbove "part" \weinBassB
   \textEndMark \markup \italic "ending: slight slow down"
   \bar "|."
 }
 
-\part "Bass C" "bass" c \bass
-\part "Bass E♭" "treble" es \bass
-\part "Bass B♭" "treble" bes \bass
+% Bass C reads the line at concert pitch (sounding c' transposes by nothing);
+% the treble parts move the whole line, keeping its octave leaps.
+\part "Bass C" "bass" c' \bass
+\part "Bass E♭" "treble" es \fit \bass
+\part "Bass B♭" "treble" bes \fit \bass

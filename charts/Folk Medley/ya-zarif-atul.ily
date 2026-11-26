@@ -90,17 +90,12 @@ interludeAccompaniment = \relative d' {
 
 interludeBass = \relative d, {
   \repeat volta 2 {
-    d4 d |
-    d4 d |
-    d4 d |
+    \repeat percent 3 { d4 d | }
   }
   \alternative {
     { d4 c8 es | }
     { d4 d8 f | }
   }
-  g4 g |
-  g4 g |
-  g4 g |
-  g4 g |
+  \repeat percent 4 { g4 g | }
   g2 |
 }
