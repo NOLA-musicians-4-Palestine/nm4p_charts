@@ -5,8 +5,9 @@ chartVersion = "2026-11-14"
 
 \header {
   title = \chartName
-  subtitle = "Ya Habibi Koullama / Chirak"
+  subsubtitle = "Ya Habibi Koullama / Chirak"
   composer = "Rahbani Brothers / Armenian folk"
+  arranger = "arr. Simon Moushabeck"
   opus = \markup { "Version" \chartVersion }
 }
 
