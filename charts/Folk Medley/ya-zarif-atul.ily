@@ -6,7 +6,10 @@
 yaZarifStart = {
   \time 2,2,2 6/4
   \set Timing.beamExceptions = #'()
-  \tempo \markup { \bold "Ya Zarif A'tul" "– drums: Dabke 1 |D--T--T-D--T--T-D---T---|" }
+  \tempo \markup \column {
+    \line { \bold "Ya Zarif A'tul" "– drums: Dabke 1 |D--T--T-D--T--T-D---T---|" }
+    \line { \normal-text \italic "1st bar rubato as intro · loop melody / accompaniment, features on call · interlude on call" }
+  }
 }
 
 yaZarifMelody = \relative c' {

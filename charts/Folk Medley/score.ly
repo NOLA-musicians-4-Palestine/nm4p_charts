@@ -15,10 +15,10 @@ scoreHigh = {
   \break
   \interludeStart
   \lines 2 \fit \interludeMelody
-  \textEndMark \markup \italic "drum break (open)"
+  \textEndMark \markup \italic "then chants / drum break"
   \break
   \delounaStart
-  \rehearsal "Intro" "all, once only"
+  \rehearsal "Intro" ""
   \fit \delounaIntro
   \break
   \rehearsal "Chorus" "High on melody, mid on accompaniment; swap 2nd time"
@@ -26,6 +26,7 @@ scoreHigh = {
   \break
   \rehearsal "Verse" ""
   \fit \delounaVerse
+  \textEndMark \markup \italic "then chants, or straight on"
   \break
   \weinStart
   \rehearsal "A" "High on melody, mid on accompaniment; swap 2nd time"
@@ -33,7 +34,7 @@ scoreHigh = {
   \break
   \rehearsal "B" ""
   \fit \weinMelodyB
-  \textEndMark \markup \italic "loop A B until the ending cue (rit.)"
+  \textEndMark \markup \italic "ending: slight slow down"
   \bar "|."
 }
 

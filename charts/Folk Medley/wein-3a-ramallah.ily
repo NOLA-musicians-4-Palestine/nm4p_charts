@@ -5,7 +5,10 @@
 
 weinStart = {
   \time 2/4
-  \tempo \markup { \bold "Wein 3a Ramallah" "– drums: Malfuf |D--T--T-|" }
+  \tempo \markup \column {
+    \line { \bold "Wein 3a Ramallah" "– drums: Malfuf |D--T--T-|" }
+    \line { \normal-text \italic "loop A B, optional feature on call" }
+  }
 }
 
 weinMelodyA = \relative f' {

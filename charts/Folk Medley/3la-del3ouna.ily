@@ -5,7 +5,10 @@
 delounaStart = {
   \time 2,2,2 6/4
   \set Timing.beamExceptions = #'()
-  \tempo \markup { \bold "3la Del3ouna" "– drums: intro stops on the 1 of each bar, then Dabke 2 |D-TTT-D-D-TTT-D-D---T---|" }
+  \tempo \markup \column {
+    \line { \bold "3la Del3ouna" "– drums: intro stops on the 1 of each bar, then Dabke 2 |D-TTT-D-D-TTT-D-D---T---|" }
+    \line { \normal-text \italic "intro once, together · loop chorus (melody / accompaniment, features on call) and verse (together)" }
+  }
 }
 
 delounaIntro = \relative c' {

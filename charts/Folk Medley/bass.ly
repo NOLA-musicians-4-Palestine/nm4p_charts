@@ -12,10 +12,10 @@ bass = {
   \break
   \interludeStart
   \noteNamesAbove "part" \lines 2 \fit \interludeBass
-  \textEndMark \markup \italic "drum break (open)"
+  \textEndMark \markup \italic "then chants / drum break"
   \break
   \delounaStart
-  \rehearsal "Intro" "once only"
+  \rehearsal "Intro" ""
   \noteNamesAbove "part" \fit \delounaBassIntro
   \break
   \rehearsal "Chorus" ""
@@ -23,6 +23,7 @@ bass = {
   \break
   \rehearsal "Verse" ""
   \noteNamesAbove "part" \fit \delounaBassVerse
+  \textEndMark \markup \italic "then chants, or straight on"
   \break
   \weinStart
   \rehearsal "A" ""
@@ -30,7 +31,7 @@ bass = {
   \break
   \rehearsal "B" ""
   \noteNamesAbove "part" \fit \weinBassB
-  \textEndMark \markup \italic "loop A B until the ending cue (rit.)"
+  \textEndMark \markup \italic "ending: slight slow down"
   \bar "|."
 }
 

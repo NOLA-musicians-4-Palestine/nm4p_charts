@@ -9,6 +9,7 @@ chartVersion = "2026-11-26"
   composer = "Palestinian folk"
   arranger = "arr. Simon Moushabeck"
   opus = \markup { "Version" \chartVersion }
+  poet = \markup \italic "Features can be a singer."
 }
 
 % Westernized Bayati: the half-flat E is played as E♭.
