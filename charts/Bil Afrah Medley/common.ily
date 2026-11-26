@@ -1,6 +1,6 @@
 \version "2.24.1"
 
-chartName = "Bil Afrah"
+chartName = "Bil Afrah Medley"
 chartVersion = "2026-11-14"
 
 \header {
