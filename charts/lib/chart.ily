@@ -82,6 +82,9 @@ fitLow = #(define-music-function (music) (ly:music?) #{ \tag #'fit-low #music #}
 % Like \fit, then one octave higher.
 fitHigh = #(define-music-function (music) (ly:music?) #{ \tag #'fit-high #music #})
 
+% Like \fit, then one octave lower.
+fitDown = #(define-music-function (music) (ly:music?) #{ \tag #'fit-down #music #})
+
 % Diatonic step of each clef's middle line, counted from middle C.
 #(define staff-middle-step '(("treble" . 6) ("bass" . -6)))
 
@@ -116,8 +119,8 @@ fitHigh = #(define-music-function (music) (ly:music?) #{ \tag #'fit-high #music 
                 (octaves (round (/ (- target current) 7))))
            (ly:music-transpose music (ly:make-pitch octaves 0 0))))))
 
-% Applies center-on-staff to every section tagged by \fit, \fitLow or \fitHigh,
-% independently.
+% Applies center-on-staff to every section tagged by \fit, \fitLow, \fitHigh or
+% \fitDown, independently.
 #(define (center-fit-sections middle-step music)
    (music-map
     (lambda (m)
@@ -127,6 +130,9 @@ fitHigh = #(define-music-function (music) (ly:music?) #{ \tag #'fit-high #music 
               ((memq 'fit-high tags)
                (ly:music-transpose (center-on-staff middle-step #f m)
                                    (ly:make-pitch 1 0 0)))
+              ((memq 'fit-down tags)
+               (ly:music-transpose (center-on-staff middle-step #f m)
+                                   (ly:make-pitch -1 0 0)))
               (else m))))
     music))
 
@@ -220,6 +226,36 @@ chordsAbove =
        $(chord-brackets chords)
      >>
    #})
+
+% Prints music with the name of each note above the staff called staff, a
+% reading aid for bass parts. A name repeats only after a different one, so
+% tied notes and octave jumps stay unnamed.
+noteNamesAbove =
+#(define-music-function (staff music) (string? ly:music?)
+   (let ((previous #f)
+         (previous-moment #f))
+     (define (changed-name pitch context)
+       (let ((key (cons (ly:pitch-notename pitch) (ly:pitch-alteration pitch)))
+             (now (ly:context-current-moment context)))
+         ;; Each \part book replays the same music from moment 0.
+         (if (and previous-moment (ly:moment<? now previous-moment))
+             (set! previous #f))
+         (set! previous-moment now)
+         (if (equal? key previous)
+             ""
+             (begin
+              (set! previous key)
+              (pitch-name-markup pitch)))))
+     #{
+       <<
+         #music
+         \new NoteNames \with {
+           alignAboveContext = #staff
+           noteNameFunction = #changed-name
+         }
+         $(ly:music-deep-copy music)
+       >>
+     #}))
 
 % Centres the \fit sections of a concert-pitch staff for the given clef, as
 % \part does after transposing; used by score.ly.
