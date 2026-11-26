@@ -6,7 +6,7 @@
 yaZarifStart = {
   \time 2,2,2 6/4
   \set Timing.beamExceptions = #'()
-  \tempo \markup { \bold "Ya Zarif A'tul" "– drums: Dabke 1 |D--T--T-D--T--T-D---T---|" } 4 = 100
+  \tempo \markup { \bold "Ya Zarif A'tul" "– drums: Dabke 1 |D--T--T-D--T--T-D---T---|" }
 }
 
 yaZarifMelody = \relative c' {
