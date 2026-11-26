@@ -12,7 +12,7 @@ Each folder is one chart, built on the shared framework in `lib/chart.ily`. `tem
 ## Building
 
 ```
-cd "charts/Bil Afrah"
+cd charts/template
 lilypond high.ly
 ```
 
