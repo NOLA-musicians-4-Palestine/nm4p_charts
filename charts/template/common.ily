@@ -8,6 +8,7 @@ chartVersion = "2026-11-26"
 \header {
   title = \chartName
   composer = "Traditional"
+  arranger = "arr. Simon Moushabeck"
   opus = \markup { "Version" \chartVersion }
 }
 

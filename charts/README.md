@@ -4,7 +4,7 @@ Each folder is one chart, built on the shared framework in `lib/chart.ily`. `tem
 
 ## Layout of a chart
 
-- `common.ily`: song metadata (`chartName`, `\header`, optional `maqam` and `concertTonic`), then `\include "../lib/chart.ily"`.
+- `common.ily`: song metadata (`chartName`, `\header` with `composer` and `arranger`, optional `maqam` and `concertTonic`), then `\include "../lib/chart.ily"`. The framework sets the subtitle to "For Hanoun Brass Band"; a medley lists its tunes in `subsubtitle`.
 - One `.ily` per tune: the music at concert pitch, in variables.
 - One `.ly` per role (`high.ly`, `mid.ly`, `bass.ly`…): assembles the form from the tune variables, then calls `\part` once per instrument. Each call prints a one-page PDF named `<chartName> - <instrument>.pdf`.
 - `score.ly`: all roles at concert pitch.

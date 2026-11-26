@@ -17,7 +17,9 @@
            ((= alteration SHARP) #{ \markup \concat { #letter \sharp } #})
            (else letter))))
 
+% A song's tune list goes in subsubtitle, under the band name.
 \header {
+  subtitle = "For Hanoun Brass Band"
   tagline = ##f
 }
 
