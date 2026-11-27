@@ -25,9 +25,10 @@ lilypond high.ly
 | `\rehearsal name label` | Section bar, boxed name (omitted when empty) and an italic cue. |
 | `\lines n music` | Breaks `music` into `n` lines of equal length, the same in every part. |
 | `\fit music` | Octave free: each part moves it by whole octaves to sit around the middle of its staff. |
-| `\fitLow music` / `\fitHigh music` | Like `\fit`, first note near the bottom line / one octave higher. |
+| `\fitLow music` / `\fitHigh music` / `\fitDown music` | Like `\fit`, first note near the bottom line / one octave higher / one octave lower. |
 | `\chordsAbove staff chords` | Chord names above the staff named `staff` (`"part"` in a `\part`). |
 | `\optionalChord chord` | Inside `\chordsAbove` chords: names it "optional, on call", with a dashed bracket. |
+| `\noteNamesAbove staff music` | Prints `music` with its note names above the staff named `staff`, a reading aid for bass parts. A name repeats only after a different one. |
 | `\dashedBracket label music` | Dashed bracket over `music`, opened by `label`. |
 | `\part name clef sounding music` | One instrument's PDF. `sounding` is the concert pitch heard for a written c: `c`, `bes`, `es`, `f`. A `♭` in `name` is drawn as a flat and spelled `b` in the filename. |
 | `\centered clef music` | Applies the `\fit` placement at concert pitch, for scores. |
