@@ -5,6 +5,10 @@
 \include "3la-del3ouna.ily"
 \include "wein-3a-ramallah.ily"
 
+\header {
+  poet = \markup \italic "Features can be a singer."
+}
+
 high = {
   \yaZarifStart
   \rehearsal "Melody" ""
